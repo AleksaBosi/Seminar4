@@ -1,20 +1,15 @@
-﻿static void Main()
-{
+﻿int[] array = new int[8];
 
-    int[] array = new int[8];
-
-    FillArray(array);
-    PrintArray(array);
-    SortAbsArray(array);
-    PrintArray(array);
-}
+FillArray(array);
+PrintArray(array);
+SortAbsArray(array);
+PrintArray(array);
 
 static void FillArray(int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
         Random rnd = new Random();
-        //arr[i] = rnd.Next(int.MinValue, int.MaxValue);  //Работает конечно и с такими значениями, но визуально уже сложно определить правильность сортировки)
         arr[i] = rnd.Next(-100, 100);
     }
 }
@@ -47,4 +42,4 @@ static void PrintArray(int[] arr)
     }
     Console.WriteLine();
 }
-Main();
+
